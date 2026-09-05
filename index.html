@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noolah Creation | Boutique Store</title>
+    <meta
+      name="description"
+      content="Noolah Creation boutique store with premium product selection, local delivery, and secure ordering options."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand" aria-label="Noolah Creation home">
+          <span class="brand-mark">N</span>
+          <span class="brand-word">Noolah</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#shop">Shop</a>
+          <a href="#story">Story</a>
+          <a href="#checkout">Checkout</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="button button-small cart-button" type="button" aria-label="Open cart">
+          Cart <span id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">crafted with intention</p>
+            <h1>Soft luxury for everyday rituals.</h1>
+            <p class="lead">
+              Shop thoughtful essentials created for slow living, warm styling,
+              and beautifully paced everyday moments.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#shop" class="button">Shop the collection</a>
+              <a href="#story" class="button button-secondary">Our story</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shop" class="shop section-spacing">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Boutique</p>
+              <h2>Choose your favorite pieces.</h2>
+            </div>
+          </div>
+
+          <div id="product-grid" class="product-grid"></div>
+        </div>
+      </section>
+
+      <section id="story" class="story section-spacing">
+        <div class="container story-grid">
+          <div class="story-image-wrap">
+            <div class="story-image large"></div>
+            <div class="story-image small"></div>
+          </div>
+
+          <div class="story-copy">
+            <p class="eyebrow">The Noolah way</p>
+            <h2>Thoughtful design for a slower, softer life.</h2>
+            <p>
+              Rooted in comfort, texture, and quiet confidence, Noolah Creation
+              curates collections inspired by nature, warm hospitality, and the
+              beauty of intentional living.
+            </p>
+            <p>
+              Every piece is designed to feel personal — from first touch to final
+              detail — blending minimal silhouettes with expressive warmth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="checkout" class="checkout section-spacing">
+        <div class="container checkout-layout">
+          <div class="cart-panel">
+            <div class="panel-header">
+              <h3>Shopping cart</h3>
+              <span id="cart-total-label">0 items</span>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <strong id="subtotal-price">$0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Delivery</span>
+              <strong>$15</strong>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <strong id="total-price">$15</strong>
+            </div>
+          </div>
+
+          <form id="checkout-form" class="checkout-form">
+            <h3>Customer information</h3>
+
+            <div class="form-row two-col">
+              <label>
+                Full name
+                <input type="text" name="fullName" required />
+              </label>
+              <label>
+                Phone number
+                <input type="tel" name="phone" required />
+              </label>
+            </div>
+
+            <div class="form-row two-col">
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                City
+                <input type="text" name="city" required />
+              </label>
+            </div>
+
+            <div class="form-row two-col">
+              <label>
+                Region / Area
+                <input type="text" name="area" required />
+              </label>
+              <label>
+                Postal code
+                <input type="text" name="postalCode" required />
+              </label>
+            </div>
+
+            <label>
+              Full address
+              <input type="text" name="address" required />
+            </label>
+
+            <div class="payment-group">
+              <p>Payment method</p>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="visa" checked />
+                  <span>Visa / Card</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="cash" />
+                  <span>Cash on delivery</span>
+                </label>
+              </div>
+            </div>
+
+            <label id="card-field" class="card-field">
+              Card number
+              <input type="text" name="cardNumber" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" />
+            </label>
+
+            <label>
+              Delivery notes
+              <textarea name="notes" rows="4" placeholder="Any notes for the delivery or gift message?"></textarea>
+            </label>
+
+            <button type="submit" class="button submit-button">Place order</button>
+            <p id="form-message" class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a href="#top" class="brand footer-brand" aria-label="Noolah Creation home">
+            <span class="brand-mark">N</span>
+            <span class="brand-word">Noolah</span>
+          </a>
+          <p>Quiet luxury for modern rituals.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#shop">Shop</a>
+          <a href="#story">Story</a>
+          <a href="#checkout">Checkout</a>
+          <a href="mailto:laithmezzi1919@gmail.com">laithmezzi1919@gmail.com</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Noolah Creation</span>
+        <span>Instagram: @noolah_creation</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
